@@ -5,16 +5,16 @@
 Summary:	Library for generating documents in AbiWord (ABW) format
 Summary(pl.UTF-8):	Biblioteka do generowania dokumentów w formacie AbiWorda (ABW)
 Name:		librvngabw
-Version:	0.0.0
+Version:	0.0.1
 Release:	1
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/librvngabw/%{name}-%{version}.tar.xz
-# Source0-md5:	bd2390d96a6818cf7191500da1f6db17
+# Source0-md5:	2b4b290bef59bb8a4a807e4b65e7f476
 URL:		http://librvngabw.sourceforge.net/
 BuildRequires:	doxygen
 BuildRequires:	librevenge-devel >= 0.0
-BuildRequires:	libstdc++-devel >= 6:4.3
+BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	pkgconfig >= 1:0.20
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -36,7 +36,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki librvngabw
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	librevenge-devel >= 0.0
-Requires:	libstdc++-devel >= 6:4.3
+Requires:	libstdc++-devel >= 6:4.7
 
 %description devel
 Header files for librvngabw library.
@@ -71,7 +71,6 @@ Dokumentacja API biblioteki librvngabw.
 %setup -q
 
 %build
-CXXFLAGS="%{rpmcxxflags} -std=c++0x"
 %configure \
 	%{?with_static_libs:--enable-static} \
 	--disable-silent-rules \
