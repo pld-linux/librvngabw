@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
 Summary:	Library for generating documents in AbiWord (ABW) format
 Summary(pl.UTF-8):	Biblioteka do generowania dokumentów w formacie AbiWorda (ABW)
 Name:		librvngabw
 Version:	0.0.1
-Release:	1
+Release:	2
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/librvngabw/%{name}-%{version}.tar.xz
@@ -60,6 +60,9 @@ Statyczna biblioteka librvngabw.
 Summary:	librvngabw API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki librvngabw
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 librvngabw API documentation.
