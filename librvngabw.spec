@@ -60,9 +60,7 @@ Statyczna biblioteka librvngabw.
 Summary:	librvngabw API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki librvngabw
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 librvngabw API documentation.
